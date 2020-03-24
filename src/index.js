@@ -4,7 +4,7 @@ import { Provider } from 'react-redux'
 import { createStore, applyMiddleware } from 'redux'
 import createSagaMiddleware from 'redux-saga'
 import sagaHandler from './saga';
-import createReducer from './reducer'
+import createReducer from './redux/reducer'
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 

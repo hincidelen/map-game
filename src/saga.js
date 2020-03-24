@@ -1,6 +1,6 @@
 import { call, put, takeLatest } from 'redux-saga/effects';
-import { LOAD_TODOS } from './actions/actionTypes';
-import { loadTodosError, loadTodosSuccess } from './actions/todo-actions'
+import { LOAD_TODOS } from './redux/actions/actionTypes';
+import { loadTodosError, loadTodosSuccess } from './redux/actions/todo-actions'
 import { LOAD_TODOS_URL } from './path';
 
 export function* loadTodosHandler() {

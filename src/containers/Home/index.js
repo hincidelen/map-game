@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { createSelector } from 'reselect';
-import { loadTodos, addItem, deleteItem } from '../../actions/todo-actions';
+import { loadTodos, addItem, deleteItem } from '../../redux/actions/todo-actions';
 import Heading from '../../components/Heading'
 import ToDo from '../../components/ToDo'
 
