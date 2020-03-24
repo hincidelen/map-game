@@ -1,0 +1,5 @@
+export const LOAD_TODOS = 'app/todos/LOAD_TODOS'
+export const LOAD_TODOS_SUCCESS = 'app/todos/LOAD_TODOS_SUCCESS'
+export const LOAD_TODOS_ERROR = 'app/todos/LOAD_TODOS_ERROR'
+export const ADD_ITEM = 'app/todos/ADD_ITEM'
+export const DELETE_ITEM = 'app/todos/DELETE_ITEM'
