@@ -4,6 +4,7 @@ import { createSelector } from 'reselect';
 import { loadTodos, addItem, deleteItem } from '../../redux/actions/todo-actions';
 import Heading from '../../components/Heading'
 import ToDo from '../../components/ToDo'
+import { config } from '../../Constants'
 
 export class Home extends React.Component {
 	constructor(props) {
@@ -16,6 +17,8 @@ export class Home extends React.Component {
 		if (this.props.todos.todoList.length === 0) {
 			this.props.loadTodos();
 		}
+		console.log("env:" + process.env.NODE_ENV +" API_HOST:"+ config.url.API_HOST + " API_URL:" + process.env.REACT_APP_API_URL +"REACT_APP_STAGE: "+process.env.REACT_APP_STAGE) ; ;
+		console.log(process.env);
 	}
 
 	onDelete(index) {
