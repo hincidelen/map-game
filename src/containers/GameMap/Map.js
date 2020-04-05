@@ -6,7 +6,7 @@ class Map extends Component {
 		const src = this.props.source;
 		return (
 			<div>
-				<img style={{position:'absolute'}} height={this.props.height} src={src}/>
+				<img alt={this.props.name} style={{position:'absolute'}} height={this.props.height} src={src}/>
 
 			</div>
 		);

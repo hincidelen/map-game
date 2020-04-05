@@ -9,7 +9,7 @@
                     "id": "1",
                     "location": {
                         "x": "70",
-                        "y": "0"
+                        "y": "15"
                     },
                     "image": {
                         "name": "dag",
@@ -50,7 +50,7 @@
               {
                 "location": {
                   "x": "309",
-                  "y": "3"
+                  "y": "20"
                 },
                 "image": {
                   "name": "dag",
@@ -182,7 +182,7 @@
                 "word": {
                   "name": "Bey",
                   "startPosition": {
-                    "x": 800,
+                    "x": 850,
                     "y": 400
                   }
                 }
@@ -356,8 +356,7 @@
                   "name": "dag",
                   "source": "/assets/images/dag.png",
                   "height": "25",
-                  "width": "70",
-                  "rotate": "0deg"
+                  "width": "70"
                 },
                 "word": {
                   "name": "Bozdağlar",
@@ -375,7 +374,6 @@
             "baseImageHeight": "400px",
             "targetBoxList": [
                 {
-                    "id": "1",
                     "location": {
                         "x": "512",
                         "y": "213"
@@ -395,8 +393,8 @@
                         }
                     }
                 },
+
                 {
-                    "id": "2",
                     "location": {
                         "x": "352",
                         "y": "173"
@@ -411,7 +409,7 @@
                     "word": {
                         "name": "Yeşilırmak",
                         "startPosition": {
-                          "x": 100,
+                          "x": 200,
                           "y": 400
                         }
                     }

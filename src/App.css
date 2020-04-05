@@ -129,6 +129,16 @@ div.ReactTags__selected span.ReactTags__tag {
   margin: 0 5px;
   border-radius: 2px;
 }
+span.dragging{
+  opacity: 0.4;
+  border: 1px solid #ddd;
+  background: #eee;
+  font-size: 6px;
+  display: inline-block;
+  padding: 5px;
+  margin: 0 5px;
+  border-radius: 2px;
+}
 div.ReactTags__selected a.ReactTags__remove {
   color: #aaa;
   margin-left: 5px;
@@ -164,7 +174,6 @@ div.ReactTags__suggestions ul li.ReactTags__activeSuggestion {
 }
 ul.nopadding{
   padding: 0px;
-  position: absolute;
   list-style-type: none;
 }
 li.side{

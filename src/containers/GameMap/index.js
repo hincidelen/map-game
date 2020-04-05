@@ -14,8 +14,7 @@ class GameMap extends Component {
 	componentDidMount() {
 		//this.setState({gameData:require('../../assets/map.json')})
 		const {mapList} = this.state.gameData;
-		this.setState({listSize:mapList.length})
-		console.log(mapList.length)
+		this.setState({listSize:mapList.length});
 	}
 
 	render() {
@@ -28,8 +27,8 @@ class GameMap extends Component {
 							{mapList.map((map, index) => {
 								const link = '/drag/'+(index);
 								return(
-									<li>
-										<Link to={link}> {map.name}</Link>
+									<li key={index}>
+										<Link key={index} to={link}> {map.name}</Link>
 									</li>
 								)
 

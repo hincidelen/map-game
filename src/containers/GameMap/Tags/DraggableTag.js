@@ -78,9 +78,9 @@ class DraggableTag extends React.Component {
 	};
 
 	onControlledDragStop = (e, position) => {
-		console.log(e);
+		/*console.log(e);
 		console.log(position);
-		console.log(this.checkPosition(position));
+		console.log(this.checkPosition(position));*/
 
 		if(!this.checkPosition(position)){
 			this.goBack();
@@ -91,10 +91,10 @@ class DraggableTag extends React.Component {
 		}
 
 		//this.onControlledDrag(e, position);
-		//this.onStop();
+		this.onStop();
 	};
 	alignPosition() {
-		const {boxLeft, boxRight, boxTop, boxBottom} = this.state;
+		const {boxLeft, boxTop} = this.state;
 
 		const x = boxLeft;
 		const y = boxTop;
@@ -107,44 +107,45 @@ class DraggableTag extends React.Component {
 		const boxBottom= boxTop + +this.props.draggableItem.image.height;
 */
 		const {boxLeft, boxRight, boxTop, boxBottom} = this.state;
-		console.log(
+		/*console.log(
 			boxLeft + ' ' +
 			position.x+ ' ' +
 			boxRight + ' ' +
 			boxTop + ' ' +
 			position.y + ' ' +
 			boxBottom
-		)
+		)*/
 
 		return this.isInOrder(
 			boxLeft,
-			position.x,
+			position.x+10,
 			boxRight
 		) && this.isInOrder(
 			boxTop,
-			position.y,
+			position.y+10,
 			boxBottom
 		);
 	};
 	isInOrder = (x,y,z) => {
-		console.log(x + ' '+ y + ' ' + z)
+		//console.log(x + ' '+ y + ' ' + z)
 		return (x<y && y<z);
 	}
 	render() {
 		const dragHandlers = {onStart: this.onStart, onStop: this.onStop, onDrag:this.handleDrag};
-		const {deltaPosition, controlledPosition, found} = this.state;// x: {deltaPosition.x.toFixed(0)}, y: {deltaPosition.y.toFixed(0)}
+		const {controlledPosition, found} = this.state;// x: {deltaPosition.x.toFixed(0)}, y: {deltaPosition.y.toFixed(0)}
 		return (
 			<div>
 				<Draggable
 					//position={{x: 0, y: 0}}
 					position={controlledPosition}
 					{...dragHandlers}
+
 					onDrag={this.onControlledDrag}
 					onStop={this.onControlledDragStop}
 					handle={found?".handle":null}
 				>
-					<div className="box ReactTags__selected" style={!found && {cursor: "move"}}>
-						<span className={"ReactTags__tag"}>{this.props.draggableItem.word.name}</span>
+					<div className="ReactTags__selected" style={!found && {cursor: "move"}}>
+						<span className={this.state.activeDrags>0?"dragging":" ReactTags__tag"}>{this.props.draggableItem.word.name}</span>
 					</div>
 				</Draggable>
 			</div>
