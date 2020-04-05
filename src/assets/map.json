@@ -2,14 +2,16 @@
     "mapList": [
         {
             "name": "Türkiye'nin Dağları",
-            "baseImage": "assets/images/dilsiz.png",
+            "baseImage": "/assets/images/dilsiz.png",
+            "baseImageHeight": "400px",
             "imageList": [
                 {
                     "name": "dag",
-                    "source": "/assetes/dag1",
+                    "source": "/assets/images/dag.png",
+                    "height": "40px",
                     "location": {
-                        "x": "12",
-                        "y": "13"
+                        "x": "312px",
+                        "y": "213px"
                     }
                 }
             ],
@@ -22,7 +24,65 @@
                 {
                     "id": "2",
                     "name": "Ağrı Dağı",
+                    "targetBoxId": "2"
+                }
+            ],
+            "targetBoxList": [
+                {
+                    "id": "1",
+                    "location": {
+                        "x": "712",
+                        "y": "213"
+                    },
+                    "image": {
+                        "name": "dag",
+                        "source": "/assets/images/dag.png",
+                        "height": "40px",
+                        "width": "100px",
+                        "rotate": "-25deg"
+                    }
+                },
+                {
+                    "id": "2",
+                    "location": {
+                        "x": "152",
+                        "y": "163"
+                    },
+                    "image": {
+                        "name": "dag",
+                        "source": "/assets/images/dag.png",
+                        "height": "40px",
+                        "width": "100px",
+                        "rotate": "40deg"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Türkiye'nin Nehirleri",
+            "baseImage": "/assets/images/dilsiz.png",
+            "baseImageHeight": "400px",
+            "imageList": [
+                {
+                    "name": "nehir",
+                    "source": "/assets/images/nehir.png",
+                    "height": "40px",
+                    "location": {
+                        "x": "542px",
+                        "y": "113px"
+                    }
+                }
+            ],
+            "draggableWordList": [
+                {
+                    "id": "1",
+                    "name": "Kızılırmak",
                     "targetBoxId": "1"
+                },
+                {
+                    "id": "2",
+                    "name": "Yeşilırmak",
+                    "targetBoxId": "2"
                 }
             ],
             "targetBoxList": [
@@ -31,6 +91,13 @@
                     "location": {
                         "x": "512",
                         "y": "213"
+                    },
+                    "image": {
+                        "name": "nehir",
+                        "source": "/assets/images/nehir.png",
+                        "height": "40px",
+                        "width": "100px",
+                        "rotate": "15deg"
                     }
                 },
                 {
@@ -38,6 +105,13 @@
                     "location": {
                         "x": "352",
                         "y": "173"
+                    },
+                    "image": {
+                        "name": "nehir",
+                        "source": "/assets/images/nehir.png",
+                        "height": "40px",
+                        "width": "100px",
+                        "rotate": "-35deg"
                     }
                 }
             ]

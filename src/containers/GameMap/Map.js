@@ -3,13 +3,29 @@ import * as PropTypes from "prop-types";
 
 class Map extends Component {
 	render() {
-		return <img style={{position:'absolute'}} height={this.props.height} src={this.props.source}/>;
+		const src = this.props.source;
+		return (
+			<div>
+				<img style={{position:'absolute'}} height={this.props.height} src={src}/>
+
+			</div>
+		);
 	}
 }
 
 Map.propTypes = {
 	height: PropTypes.any,
-	source: PropTypes.any
+	source: PropTypes.any,
+	imageList: PropTypes.any
 };
 
 export default Map;
+/*
+				{this.props.imageList.map((image, index) => {
+					const marginLeft=image.location.x;
+					const marginTop=image.location.y;
+					return(
+						<img style={{position:'absolute', marginLeft, marginTop}} height={image.height} src={image.source}/>
+					)
+				})}
+ */

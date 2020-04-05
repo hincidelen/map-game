@@ -2,7 +2,37 @@
     "mapList": [
         {
             "name": "Türkiye'nin Dağları",
-            "baseImage": "assets/images/dilsiz.png",
+            "baseImage": "/assets/images/dilsiz.png",
+            "imageList": [
+                {
+                    "name": "dag",
+                    "source": "/assetes/dag1",
+                    "location": {
+                        "x": "12",
+                        "y": "13"
+                    }
+                }
+            ],
+            "draggableWordList": [
+                {
+                    "id": "1",
+                    "name": "Subhan Dağı",
+                    "targetBoxId": "1"
+                }
+            ],
+            "targetBoxList": [
+                {
+                    "id": "1",
+                    "location": {
+                        "x": "12",
+                        "y": "13"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Türkiye'nin Nehirleri",
+            "baseImage": "/assets/images/dilsiz.png",
             "imageList": [
                 {
                     "name": "dag",

@@ -1,36 +1,72 @@
 import React, {Component} from "react";
-import Drag from "./DraggableTag";
 import * as PropTypes from "prop-types";
 
-import Draggable from 'react-draggable';
 class TargetBoxList extends Component {
-    constructor(props) {
+    state = {
+        height: 10,
+        width: 100,
+        isOver: false
+    };
+    /*constructor(props) {
         super(props);
         this.state = {
             height: 10,
-            width: 65
+            width: 100,
+            isOver: false
         };
+    }*/
+    componentDidMount() {
+        console.log(this.state);
+
+
     }
-    changeBackground(e) {
-        console.log('girdi');
+
+    dragEnter(e) {
+        //console.log(this.state);
         e.target.style.background = 'red';
+        //this.boo=true;
+        /*if(this.state.isOver!=undefined && !this.state.isOver)
+            this.setState({isOver: true})*/
     }
-    changeBackground2(e) {
-        console.log('çıktı');
+    dragLeave(e) {
+        //console.log(this.state);
         e.target.style.background = 'white';
+        /*if(this.state.isOver)
+            this.setState({isOver: false})*/
     }
     render() {
         const {list} = this.props;//style={{display: "inline"}}
-
         return <ul>
             {list.map((item, index) => {
                 const {x, y} = item.location;
-                const{height, width} = this.state;
+                const {source, height, width, rotate} = item.image;
                 const marginLeft = x + 'px';
                 const marginTop = y + 'px';
-
+                const style = {
+                    height,
+                    width,
+                    marginLeft,
+                    marginTop,
+                    position: 'absolute',
+                    border: '1px solid #aaaaaa',
+                    backgroundImage: "url(" + source + ")",
+                    backgroundPosition: "center",
+                    backgroundRepeat: "no-repeat",
+                    backgroundSize: "cover",
+                    transform: "rotate(" + rotate + ")"
+                };
+                console.log(source);
                 return (
-                    <li className={'targetBox'+item.id} onDragOver={this.changeBackground} onDragEnter={this.changeBackground} onDragLeave={this.changeBackground2} style={{ height, width, position:'absolute',border: '1px solid #aaaaaa', marginLeft, marginTop}}>
+                    <li>
+
+                        <div
+                            className={'targetBox'+item.id}
+                            //onDragOver={this.dragEnter}
+                            onDragEnter={this.dragEnter}
+                            onDragLeave={this.dragLeave}
+                            style = {style}>
+
+                        </div>
                     </li>
                 )
             })}

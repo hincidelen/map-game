@@ -59,7 +59,7 @@ class DraggableTag extends React.Component {
 	};
 	render() {
 		const dragHandlers = {onStart: this.onStart, onStop: this.onStop, onDrag:this.handleDrag};
-		const {deltaPosition, controlledPosition} = this.state;
+		const {deltaPosition, controlledPosition} = this.state;// x: {deltaPosition.x.toFixed(0)}, y: {deltaPosition.y.toFixed(0)}
 		return (
 			<div>
 				<Draggable
@@ -67,7 +67,7 @@ class DraggableTag extends React.Component {
 					{...dragHandlers}
 				>
 					<div className="box">
-						<div>{this.props.name} x: {deltaPosition.x.toFixed(0)}, y: {deltaPosition.y.toFixed(0)}</div>
+						<div>{this.props.name}</div>
 					</div>
 				</Draggable>
 			</div>

@@ -1,28 +1,43 @@
 import React, {Component} from 'react';
-import Map from "./Map";
-import TagList from "./Tags/TagList";
-import TargetBoxList from "./Tags/TargetBoxList";
+import { BrowserRouter, Route, Link } from 'react-router-dom'
+import Game from './Game'
 
 class GameMap extends Component {
+
 	constructor(props) {
 		super(props);
 		this.state = {
-			isMouseOver: false,
-			gameData: require('../../assets/map.json'),
-			imageHeigt: '400px'
+			listSize: 0,
+			gameData: require('../../assets/map.json')
 		};
 	}
-	render() {//.mapList[0].baseImage
-		let {gameData, imageHeigt}= this.state;//style={{position:'absolute'}}
+	componentDidMount() {
+		//this.setState({gameData:require('../../assets/map.json')})
+		const {mapList} = this.state.gameData;
+		this.setState({listSize:mapList.length})
+		console.log(mapList.length)
+	}
+
+	render() {
+		const {mapList} = this.state.gameData;
 		return (
-			<div className={"container"}>
-				<h4>Coğrafya Quizi</h4>
-				<p>Hangi şehirleri ziyaret ettin?</p>
-				<div style={{height:imageHeigt}}  >
-					<Map height={imageHeigt} source={gameData.mapList[0].baseImage}/>
-					<TargetBoxList list={gameData.mapList[0].targetBoxList}/>
-				</div>
-				<TagList draggableWordList={gameData.mapList[0].draggableWordList}/>
+			<div className="App">
+				<BrowserRouter>
+					<div>
+						<ul>
+							{mapList.map((map, index) => {
+								const link = '/drag/'+(index);
+								return(
+									<li>
+										<Link to={link}> {map.name}</Link>
+									</li>
+								)
+
+							})}
+						</ul>
+					</div>
+					<Route path='/drag/:index' component={Game} />
+				</BrowserRouter>
 			</div>
 		);
 	}
