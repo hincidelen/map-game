@@ -51,8 +51,8 @@ class TargetBoxList extends Component {
                     border: '1px solid #aaaaaa',
                     backgroundImage: "url(" + source + ")",
                     backgroundPosition: "center",
-                    backgroundRepeat: "no-repeat",
-                    backgroundSize: "cover",
+                    backgroundRepeat: "repeat",
+                    backgroundSize: "contain",
                     transform: "rotate(" + rotate + ")"
                 };
                 console.log(source);

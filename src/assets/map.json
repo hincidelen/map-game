@@ -8,37 +8,365 @@
                 {
                     "id": "1",
                     "location": {
-                        "x": "712",
-                        "y": "213"
+                        "x": "70",
+                        "y": "0"
                     },
                     "image": {
                         "name": "dag",
                         "source": "/assets/images/dag.png",
-                        "height": "40",
-                        "width": "100",
+                        "height": "25",
+                        "width": "70",
                         "rotate": "0deg"
                     },
                     "word": {
-                        "name": "Erciyes"
+                        "name": "Yıldız",
+                        "startPosition": {
+                          "x": 0,
+                          "y": 400
+                        }
                     }
                 },
                 {
                     "id": "2",
                     "location": {
-                        "x": "152",
-                        "y": "163"
+                        "x": "190",
+                        "y": "110"
                     },
                     "image": {
                         "name": "dag",
                         "source": "/assets/images/dag.png",
-                        "height": "40",
-                        "width": "100",
+                        "height": "25",
+                        "width": "70",
                         "rotate": "0deg"
                     },
                     "word": {
-                        "name": "Ağrı Dağı"
+                        "name": "Sündiken",
+                        "startPosition": {
+                          "x": 100,
+                          "y": 400
+                        }
                     }
+                },
+              {
+                "location": {
+                  "x": "309",
+                  "y": "3"
+                },
+                "image": {
+                  "name": "dag",
+                  "source": "/assets/images/dag.png",
+                  "height": "25",
+                  "width": "140",
+                  "rotate": "0deg"
+                },
+                "word": {
+                  "name": "Küre",
+                  "startPosition": {
+                    "x": 200,
+                    "y": 400
+                  }
                 }
+              },
+              {
+                "location": {
+                  "x": "393",
+                  "y": "57"
+                },
+                "image": {
+                  "name": "dag",
+                  "source": "/assets/images/dag.png",
+                  "height": "25",
+                  "width": "70",
+                  "rotate": "0deg"
+                },
+                "word": {
+                  "name": "Ilgaz",
+                  "startPosition": {
+                    "x": 300,
+                    "y": 400
+                  }
+                }
+              },
+              {
+                "location": {
+                  "x": "309",
+                  "y": "98"
+                },
+                "image": {
+                  "name": "dag",
+                  "source": "/assets/images/dag.png",
+                  "height": "25",
+                  "width": "140",
+                  "rotate": "0deg"
+                },
+                "word": {
+                  "name": "Köroğlu",
+                  "startPosition": {
+                    "x": 400,
+                    "y": 400
+                  }
+                }
+              },
+              {
+                "location": {
+                  "x": "529",
+                  "y": "49"
+                },
+                "image": {
+                  "name": "dag",
+                  "source": "/assets/images/dag.png",
+                  "height": "25",
+                  "width": "70",
+                  "rotate": "0deg"
+                },
+                "word": {
+                  "name": "Canik",
+                  "startPosition": {
+                    "x": 500,
+                    "y": 400
+                  }
+                }
+              },
+              {
+                "location": {
+                  "x": "253",
+                  "y": "304"
+                },
+                "image": {
+                  "name": "dag",
+                  "source": "/assets/images/dag.png",
+                  "height": "25",
+                  "width": "70",
+                  "rotate": "0deg"
+                },
+                "word": {
+                  "name": "Geyik",
+                  "startPosition": {
+                    "x": 600,
+                    "y": 400
+                  }
+                }
+              },
+              {
+                "location": {
+                  "x": "653",
+                  "y": "208"
+                },
+                "image": {
+                  "name": "dag",
+                  "source": "/assets/images/dag.png",
+                  "height": "25",
+                  "width": "190",
+                  "rotate": "0deg"
+                },
+                "word": {
+                  "name": "Güneydoğu Toroslar",
+                  "startPosition": {
+                    "x": 700,
+                    "y": 400
+                  }
+                }
+              },
+              {
+                "location": {
+                  "x": "174",
+                  "y": "311"
+                },
+                "image": {
+                  "name": "dag",
+                  "source": "/assets/images/dag.png",
+                  "height": "25",
+                  "width": "70",
+                  "rotate": "0deg"
+                },
+                "word": {
+                  "name": "Bey",
+                  "startPosition": {
+                    "x": 800,
+                    "y": 400
+                  }
+                }
+              },
+              {
+                "location": {
+                  "x": "220",
+                  "y": "228"
+                },
+                "image": {
+                  "name": "dag",
+                  "source": "/assets/images/dag.png",
+                  "height": "25",
+                  "width": "70",
+                  "rotate": "0deg"
+                },
+                "word": {
+                  "name": "Sultan",
+                  "startPosition": {
+                    "x": 0,
+                    "y": 450
+                  }
+                }
+              },
+              {
+                "location": {
+                  "x": "755",
+                  "y": "96"
+                },
+                "image": {
+                  "name": "dag",
+                  "source": "/assets/images/dag.png",
+                  "height": "25",
+                  "width": "70",
+                  "rotate": "0deg"
+                },
+                "word": {
+                  "name": "Aras",
+                  "startPosition": {
+                    "x": 100,
+                    "y": 450
+                  }
+                }
+              },
+              {
+                "location": {
+                  "x": "740",
+                  "y": "40"
+                },
+                "image": {
+                  "name": "dag",
+                  "source": "/assets/images/dag.png",
+                  "height": "25",
+                  "width": "70",
+                  "rotate": "0deg"
+                },
+                "word": {
+                  "name": "Allahuekber",
+                  "startPosition": {
+                    "x": 200,
+                    "y": 450
+                  }
+                }
+              },
+              {
+                "location": {
+                  "x": "406",
+                  "y": "286"
+                },
+                "image": {
+                  "name": "dag",
+                  "source": "/assets/images/dag.png",
+                  "height": "25",
+                  "width": "70",
+                  "rotate": "0deg"
+                },
+                "word": {
+                  "name": "Bolkar",
+                  "startPosition": {
+                    "x": 300,
+                    "y": 450
+                  }
+                }
+              },
+              {
+                "location": {
+                  "x": "440",
+                  "y": "180"
+                },
+                "image": {
+                  "name": "dag",
+                  "source": "/assets/images/dag.png",
+                  "height": "25",
+                  "width": "70",
+                  "rotate": "0deg"
+                },
+                "word": {
+                  "name": "Akdağlar",
+                  "startPosition": {
+                    "x": 400,
+                    "y": 450
+                  }
+                }
+              },
+              {
+                "location": {
+                  "x": "67",
+                  "y": "275"
+                },
+                "image": {
+                  "name": "dag",
+                  "source": "/assets/images/dag.png",
+                  "height": "25",
+                  "width": "70",
+                  "rotate": "0deg"
+                },
+                "word": {
+                  "name": "Menteşeler",
+                  "startPosition": {
+                    "x": 500,
+                    "y": 450
+                  }
+                }
+              },
+              {
+                "location": {
+                  "x": "17",
+                  "y": "125"
+                },
+                "image": {
+                  "name": "dag",
+                  "source": "/assets/images/dag.png",
+                  "height": "25",
+                  "width": "70",
+                  "rotate": "0deg"
+                },
+                "word": {
+                  "name": "Kazdağları",
+                  "startPosition": {
+                    "x": 600,
+                    "y": 450
+                  }
+                }
+              },
+              {
+                "location": {
+                  "x": "676",
+                  "y": "91"
+                },
+                "image": {
+                  "name": "dag",
+                  "source": "/assets/images/dag.png",
+                  "height": "25",
+                  "width": "70",
+                  "rotate": "0deg"
+                },
+                "word": {
+                  "name": "Yalnızçam",
+                  "startPosition": {
+                    "x": 700,
+                    "y": 450
+                  }
+                }
+              },
+              {
+                "location": {
+                  "x": "66",
+                  "y": "202"
+                },
+                "image": {
+                  "name": "dag",
+                  "source": "/assets/images/dag.png",
+                  "height": "25",
+                  "width": "70",
+                  "rotate": "0deg"
+                },
+                "word": {
+                  "name": "Bozdağlar",
+                  "startPosition": {
+                    "x": 800,
+                    "y": 450
+                  }
+                }
+              }
             ]
         },
         {
@@ -55,12 +383,16 @@
                     "image": {
                         "name": "nehir",
                         "source": "/assets/images/nehir.png",
-                        "height": "40",
-                        "width": "100",
+                        "height": "25",
+                        "width": "70",
                         "rotate": "0deg"
                     },
                     "word": {
-                        "name": "Kızılırmak"
+                        "name": "Kızılırmak",
+                        "startPosition": {
+                          "x": 100,
+                          "y": 400
+                        }
                     }
                 },
                 {
@@ -72,12 +404,16 @@
                     "image": {
                         "name": "nehir",
                         "source": "/assets/images/nehir.png",
-                        "height": "40",
-                        "width": "100",
+                        "height": "25",
+                        "width": "70",
                         "rotate": "0deg"
                     },
                     "word": {
-                        "name": "Yeşilırmak"
+                        "name": "Yeşilırmak",
+                        "startPosition": {
+                          "x": 100,
+                          "y": 400
+                        }
                     }
                 }
             ]

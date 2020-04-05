@@ -10,9 +10,23 @@ class DraggableTag extends React.Component {
 			x: 0, y: 0
 		},
 		controlledPosition: {
-			x: this.props.startPosition.x, y: this.props.startPosition.y
-		}
-	};
+			x: 0, y: 0
+		},
+		found: false,
+		boxLeft: +this.props.draggableItem.location.x,
+		boxRight: +this.props.draggableItem.location.x + +this.props.draggableItem.image.width,
+		boxTop: +this.props.draggableItem.location.y,
+		boxBottom: +this.props.draggableItem.location.y + +this.props.draggableItem.image.height
+
+
+};
+	componentDidMount() {
+		this.goBack();
+	}
+
+	componentWillReceiveProps(nextProps, nextContext) {
+		this.goBack();
+	}
 
 	handleDrag = (e, ui) => {
 		const {x, y} = this.state.deltaPosition;
@@ -58,7 +72,8 @@ class DraggableTag extends React.Component {
 			controlledPosition: {
 			x: this.props.startPosition.x,
 			y: this.props.startPosition.y
-			}
+			},
+			found: false
 		});
 	};
 
@@ -70,16 +85,28 @@ class DraggableTag extends React.Component {
 		if(!this.checkPosition(position)){
 			this.goBack();
 		}
-		/*
-		this.onControlledDrag(e, position);
-		this.onStop();*/
+		else{
+			this.alignPosition();
+			this.setState({found: true});
+		}
+
+		//this.onControlledDrag(e, position);
+		//this.onStop();
 	};
+	alignPosition() {
+		const {boxLeft, boxRight, boxTop, boxBottom} = this.state;
+
+		const x = boxLeft;
+		const y = boxTop;
+		this.setState({controlledPosition: {x, y}});
+	}
 	checkPosition=(position)=>{
-		const boxLeft = +this.props.draggableItem.location.x;
+	/*	const boxLeft = +this.props.draggableItem.location.x;
 		const boxRight= boxLeft + +this.props.draggableItem.image.width;
 		const boxTop = +this.props.draggableItem.location.y;
 		const boxBottom= boxTop + +this.props.draggableItem.image.height;
-
+*/
+		const {boxLeft, boxRight, boxTop, boxBottom} = this.state;
 		console.log(
 			boxLeft + ' ' +
 			position.x+ ' ' +
@@ -105,7 +132,7 @@ class DraggableTag extends React.Component {
 	}
 	render() {
 		const dragHandlers = {onStart: this.onStart, onStop: this.onStop, onDrag:this.handleDrag};
-		const {deltaPosition, controlledPosition} = this.state;// x: {deltaPosition.x.toFixed(0)}, y: {deltaPosition.y.toFixed(0)}
+		const {deltaPosition, controlledPosition, found} = this.state;// x: {deltaPosition.x.toFixed(0)}, y: {deltaPosition.y.toFixed(0)}
 		return (
 			<div>
 				<Draggable
@@ -114,15 +141,10 @@ class DraggableTag extends React.Component {
 					{...dragHandlers}
 					onDrag={this.onControlledDrag}
 					onStop={this.onControlledDragStop}
+					handle={found?".handle":null}
 				>
-					<div className="box">
-						<div>{this.props.draggableItem.word.name}</div>
-						<p>
-							<a href="#" onClick={this.adjustXPos}>Adjust x ({controlledPosition.x})</a>
-						</p>
-						<p>
-							<a href="#" onClick={this.adjustYPos}>Adjust y ({controlledPosition.y})</a>
-						</p>
+					<div className="box ReactTags__selected" style={!found && {cursor: "move"}}>
+						<span className={"ReactTags__tag"}>{this.props.draggableItem.word.name}</span>
 					</div>
 				</Draggable>
 			</div>

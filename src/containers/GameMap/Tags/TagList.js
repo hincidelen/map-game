@@ -11,14 +11,24 @@ class TagList extends Component {
             imageWidth: '900px'
         };
     }*/
+    componentDidMount() {
+        this.goBack();
+    }
+
+    goBack(){
+        console.log('döngeri')
+        this.setState({});
+    }
+
     render() {
         const {draggableWordList} = this.props;//style={{display: "inline"}}
         return <ul className={'nopadding'}>
             {draggableWordList.map((draggableItem, index) => {
                 const startPosition = {
-                    x:(index*100),
-                    y:400
-                }
+                    x: (draggableItem.word.startPosition.x),
+                    y: draggableItem.word.startPosition.y
+                };
+                console.log(startPosition);
                 return (
                     <li className={'side'}>
                         <Drag
