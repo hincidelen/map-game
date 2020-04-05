@@ -4,29 +4,6 @@
             "name": "Türkiye'nin Dağları",
             "baseImage": "/assets/images/dilsiz.png",
             "baseImageHeight": "400px",
-            "imageList": [
-                {
-                    "name": "dag",
-                    "source": "/assets/images/dag.png",
-                    "height": "40px",
-                    "location": {
-                        "x": "312px",
-                        "y": "213px"
-                    }
-                }
-            ],
-            "draggableWordList": [
-                {
-                    "id": "1",
-                    "name": "Subhan Dağı",
-                    "targetBoxId": "1"
-                },
-                {
-                    "id": "2",
-                    "name": "Ağrı Dağı",
-                    "targetBoxId": "2"
-                }
-            ],
             "targetBoxList": [
                 {
                     "id": "1",
@@ -37,9 +14,12 @@
                     "image": {
                         "name": "dag",
                         "source": "/assets/images/dag.png",
-                        "height": "40px",
-                        "width": "100px",
-                        "rotate": "-25deg"
+                        "height": "40",
+                        "width": "100",
+                        "rotate": "0deg"
+                    },
+                    "word": {
+                        "name": "Erciyes"
                     }
                 },
                 {
@@ -51,9 +31,12 @@
                     "image": {
                         "name": "dag",
                         "source": "/assets/images/dag.png",
-                        "height": "40px",
-                        "width": "100px",
-                        "rotate": "40deg"
+                        "height": "40",
+                        "width": "100",
+                        "rotate": "0deg"
+                    },
+                    "word": {
+                        "name": "Ağrı Dağı"
                     }
                 }
             ]
@@ -62,29 +45,6 @@
             "name": "Türkiye'nin Nehirleri",
             "baseImage": "/assets/images/dilsiz.png",
             "baseImageHeight": "400px",
-            "imageList": [
-                {
-                    "name": "nehir",
-                    "source": "/assets/images/nehir.png",
-                    "height": "40px",
-                    "location": {
-                        "x": "542px",
-                        "y": "113px"
-                    }
-                }
-            ],
-            "draggableWordList": [
-                {
-                    "id": "1",
-                    "name": "Kızılırmak",
-                    "targetBoxId": "1"
-                },
-                {
-                    "id": "2",
-                    "name": "Yeşilırmak",
-                    "targetBoxId": "2"
-                }
-            ],
             "targetBoxList": [
                 {
                     "id": "1",
@@ -95,9 +55,12 @@
                     "image": {
                         "name": "nehir",
                         "source": "/assets/images/nehir.png",
-                        "height": "40px",
-                        "width": "100px",
-                        "rotate": "15deg"
+                        "height": "40",
+                        "width": "100",
+                        "rotate": "0deg"
+                    },
+                    "word": {
+                        "name": "Kızılırmak"
                     }
                 },
                 {
@@ -109,9 +72,12 @@
                     "image": {
                         "name": "nehir",
                         "source": "/assets/images/nehir.png",
-                        "height": "40px",
-                        "width": "100px",
-                        "rotate": "-35deg"
+                        "height": "40",
+                        "width": "100",
+                        "rotate": "0deg"
+                    },
+                    "word": {
+                        "name": "Yeşilırmak"
                     }
                 }
             ]

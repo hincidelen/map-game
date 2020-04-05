@@ -23,31 +23,31 @@ class TargetBoxList extends Component {
 
     dragEnter(e) {
         //console.log(this.state);
-        e.target.style.background = 'red';
+        //e.target.style.background = 'red';
         //this.boo=true;
         /*if(this.state.isOver!=undefined && !this.state.isOver)
             this.setState({isOver: true})*/
     }
     dragLeave(e) {
         //console.log(this.state);
-        e.target.style.background = 'white';
+        //e.target.style.background = 'white';
         /*if(this.state.isOver)
             this.setState({isOver: false})*/
     }
     render() {
         const {list} = this.props;//style={{display: "inline"}}
-        return <ul>
+        return <ul className={'nopadding'} >
             {list.map((item, index) => {
                 const {x, y} = item.location;
                 const {source, height, width, rotate} = item.image;
                 const marginLeft = x + 'px';
                 const marginTop = y + 'px';
                 const style = {
-                    height,
-                    width,
+                    height: height+'px',
+                    width: width+'px',
                     marginLeft,
                     marginTop,
-                    position: 'absolute',
+                    //position: 'absolute',
                     border: '1px solid #aaaaaa',
                     backgroundImage: "url(" + source + ")",
                     backgroundPosition: "center",
@@ -57,10 +57,10 @@ class TargetBoxList extends Component {
                 };
                 console.log(source);
                 return (
-                    <li>
+                    <li className={'side'}>
 
                         <div
-                            className={'targetBox'+item.id}
+                            className={'targetBox'}
                             //onDragOver={this.dragEnter}
                             onDragEnter={this.dragEnter}
                             onDragLeave={this.dragLeave}

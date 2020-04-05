@@ -28,8 +28,8 @@ class Game extends Component {
 				<div style={{height:imageHeigt}}  >
 					<Map imageList={imageList} height={imageHeigt} source={imageSource}/>
 					<TargetBoxList list={gameData.mapList[index].targetBoxList}/>
+					<TagList draggableWordList={gameData.mapList[index].targetBoxList}/>
 				</div>
-				<TagList draggableWordList={gameData.mapList[index].draggableWordList}/>
 			</div>
 		);
 	}

@@ -162,3 +162,17 @@ div.ReactTags__suggestions ul li.ReactTags__activeSuggestion {
 .container {
   margin-left: 50px;
 }
+ul.nopadding{
+  padding: 0px;
+  position: absolute;
+  list-style-type: none;
+}
+li.side{
+  position: absolute;
+  display: inline-block;
+  padding: 0px;
+}
+li.sidetag{
+  display: inline-block;
+  padding: 0px;
+}

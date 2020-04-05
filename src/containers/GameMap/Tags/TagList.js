@@ -13,13 +13,17 @@ class TagList extends Component {
     }*/
     render() {
         const {draggableWordList} = this.props;//style={{display: "inline"}}
-        return <ul >
-            {draggableWordList.map((item, index) => {
+        return <ul className={'nopadding'}>
+            {draggableWordList.map((draggableItem, index) => {
+                const startPosition = {
+                    x:(index*100),
+                    y:400
+                }
                 return (
-                    <li>
+                    <li className={'side'}>
                         <Drag
-                        name={item.name}
-                        targetBoxId={item.targetBoxId}
+                            draggableItem={draggableItem}
+                            startPosition={startPosition}
                         />
                     </li>
                 )

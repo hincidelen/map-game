@@ -10,7 +10,7 @@ class DraggableTag extends React.Component {
 			x: 0, y: 0
 		},
 		controlledPosition: {
-			x: -400, y: 200
+			x: this.props.startPosition.x, y: this.props.startPosition.y
 		}
 	};
 
@@ -53,21 +53,76 @@ class DraggableTag extends React.Component {
 		this.setState({controlledPosition: {x, y}});
 	};
 
-	onControlledDragStop = (e, position) => {
-		this.onControlledDrag(e, position);
-		this.onStop();
+	goBack = () => {
+		this.setState({
+			controlledPosition: {
+			x: this.props.startPosition.x,
+			y: this.props.startPosition.y
+			}
+		});
 	};
+
+	onControlledDragStop = (e, position) => {
+		console.log(e);
+		console.log(position);
+		console.log(this.checkPosition(position));
+
+		if(!this.checkPosition(position)){
+			this.goBack();
+		}
+		/*
+		this.onControlledDrag(e, position);
+		this.onStop();*/
+	};
+	checkPosition=(position)=>{
+		const boxLeft = +this.props.draggableItem.location.x;
+		const boxRight= boxLeft + +this.props.draggableItem.image.width;
+		const boxTop = +this.props.draggableItem.location.y;
+		const boxBottom= boxTop + +this.props.draggableItem.image.height;
+
+		console.log(
+			boxLeft + ' ' +
+			position.x+ ' ' +
+			boxRight + ' ' +
+			boxTop + ' ' +
+			position.y + ' ' +
+			boxBottom
+		)
+
+		return this.isInOrder(
+			boxLeft,
+			position.x,
+			boxRight
+		) && this.isInOrder(
+			boxTop,
+			position.y,
+			boxBottom
+		);
+	};
+	isInOrder = (x,y,z) => {
+		console.log(x + ' '+ y + ' ' + z)
+		return (x<y && y<z);
+	}
 	render() {
 		const dragHandlers = {onStart: this.onStart, onStop: this.onStop, onDrag:this.handleDrag};
 		const {deltaPosition, controlledPosition} = this.state;// x: {deltaPosition.x.toFixed(0)}, y: {deltaPosition.y.toFixed(0)}
 		return (
 			<div>
 				<Draggable
-					position={{x: 0, y: 0}}
+					//position={{x: 0, y: 0}}
+					position={controlledPosition}
 					{...dragHandlers}
+					onDrag={this.onControlledDrag}
+					onStop={this.onControlledDragStop}
 				>
 					<div className="box">
-						<div>{this.props.name}</div>
+						<div>{this.props.draggableItem.word.name}</div>
+						<p>
+							<a href="#" onClick={this.adjustXPos}>Adjust x ({controlledPosition.x})</a>
+						</p>
+						<p>
+							<a href="#" onClick={this.adjustYPos}>Adjust y ({controlledPosition.y})</a>
+						</p>
 					</div>
 				</Draggable>
 			</div>
