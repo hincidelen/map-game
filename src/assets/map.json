@@ -1,0 +1,46 @@
+{
+    "mapList": [
+        {
+            "name": "Türkiye'nin Dağları",
+            "baseImage": "assets/images/dilsiz.png",
+            "imageList": [
+                {
+                    "name": "dag",
+                    "source": "/assetes/dag1",
+                    "location": {
+                        "x": "12",
+                        "y": "13"
+                    }
+                }
+            ],
+            "draggableWordList": [
+                {
+                    "id": "1",
+                    "name": "Subhan Dağı",
+                    "targetBoxId": "1"
+                },
+                {
+                    "id": "2",
+                    "name": "Ağrı Dağı",
+                    "targetBoxId": "1"
+                }
+            ],
+            "targetBoxList": [
+                {
+                    "id": "1",
+                    "location": {
+                        "x": "512",
+                        "y": "213"
+                    }
+                },
+                {
+                    "id": "2",
+                    "location": {
+                        "x": "352",
+                        "y": "173"
+                    }
+                }
+            ]
+        }
+    ]
+}

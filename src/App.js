@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Link } from 'react-router-dom'
 import Home from './containers/Home'
 import About from './containers/About'
 import Contact from './containers/Contact'
+import GameMap from "./containers/GameMap";
 import './App.css';
 
 class App extends Component {
@@ -22,11 +23,15 @@ class App extends Component {
 							<li>
 								<Link to="/contact">CONTACT</Link>
 							</li>
+							<li>
+								<Link to="/drag">DRAG</Link>
+							</li>
 						</ul>
 					</div>
 					<Route exact path="/" component={Home} />
 					<Route path="/about" component={About} />
 					<Route path="/contact" component={Contact} />
+					<Route path="/drag" component={GameMap} />
 				</BrowserRouter>
 			</div>
 		);
